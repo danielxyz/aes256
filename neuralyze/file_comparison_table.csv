@@ -1,0 +1,5 @@
+File,Type,Size (bytes),Format,Readable,Security,Purpose,SHA256 (first 16)
+masterkee.k3y,Master Key,64,Base64,No,CRITICAL,Encryption+MAC keys,db29ef5a8b775496
+dec_danielx.txt,Plaintext (OpenVPN),20480,Text/Binary,Yes,UNPROTECTED,VPN credentials,38856920dfdd4e4a
+enc_danielx.enc,Encrypted,20544,Base64,No,PROTECTED,Encrypted VPN config,varies (IV based)
+dec2enc.enc,Encrypted (Re-encrypted),20544,Base64,No,PROTECTED,Re-encrypted same data,varies (IV based)

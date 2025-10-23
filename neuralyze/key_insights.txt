@@ -1,0 +1,41 @@
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+KEY INSIGHTS & FAKTA PENTING
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+1. MULTIPLE ENCRYPTION WITH SAME KEY = DIFFERENT OUTPUT
+   ✓ dec_danielx.txt dienkripsi 2x dengan key yang sama
+   ✓ Hasilnya berbeda: enc_danielx.enc ≠ dec2enc.enc
+   ✓ Penyebab: Random IV berbeda di setiap enkripsi
+   ✓ Ini adalah FITUR KEAMANAN, bukan bug!
+
+2. IV (INITIALIZATION VECTOR) ROLE
+   ✓ IV di-generate random setiap enkripsi
+   ✓ IV berbeda → ciphertext berbeda (meski plaintext & key sama)
+   ✓ IV tidak perlu dirahasiakan (dikirim bersama ciphertext)
+   ✓ IV HARUS unik untuk setiap enkripsi dengan key yang sama
+
+3. HMAC PROTECTION
+   ✓ HMAC computed atas IV + Ciphertext
+   ✓ Jika 1 bit berubah → HMAC verification gagal
+   ✓ Protect dari tampering, bit-flipping, padding oracle attacks
+   ✓ Encrypt-then-MAC = best practice (lebih aman dari MAC-then-Encrypt)
+
+4. FILE SIZE MATHEMATICS
+   ✓ Plaintext: 20,480 bytes
+   ✓ Block size: 16 bytes (AES)
+   ✓ Padding: 16 bytes (20480 % 16 = 0, tambah 1 block penuh per PKCS7)
+   ✓ Encrypted: 16 (IV) + 20,496 (cipher) + 32 (HMAC) = 20,544 bytes
+   ✓ Base64: 20,544 bytes → 27,392 characters (4/3 expansion)
+
+5. SECURITY LEVEL
+   ✓ AES-256: 2^256 possible keys (computationally infeasible to brute force)
+   ✓ Quantum resistance: ~128-bit security (still safe for 30-40 years)
+   ✓ HMAC-SHA256: Collision resistant, pre-image resistant
+   ✓ Combined: Military-grade encryption + authentication
+
+6. KERENTANAN TANPA KEY
+   ✓ Tanpa masterkee.k3y → IMPOSSIBLE to decrypt
+   ✓ Wrong key → HMAC verification fails instantly
+   ✓ Tampered data → HMAC verification fails
+   ✓ No key = No plaintext recovery (even with quantum computer)

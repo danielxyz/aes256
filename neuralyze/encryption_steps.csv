@@ -1,0 +1,8 @@
+Step,Input,Process,Output,Size Change
+1,Plaintext,Load file,Raw bytes,"20,480 bytes"
+2,Raw bytes,Add PKCS7 padding,Padded,"20,496 bytes (+16)"
+3,Padded,Generate random IV,IV generated,16 bytes
+4,Padded + IV,AES-256-CBC encrypt,Ciphertext,"20,496 bytes"
+5,IV + Ciphertext,Compute HMAC-SHA256,HMAC tag,32 bytes
+6,IV + Cipher + HMAC,Combine components,Binary package,"20,544 bytes"
+7,Binary package,Base64 URL-safe encode,Final .enc file,"27,392 chars"

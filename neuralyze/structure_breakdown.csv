@@ -1,0 +1,10 @@
+Component,Size (bytes),Format,Purpose
+Master Key,64,Binary,Split untuk enc+mac
+Encryption Key,32,Binary,AES-256 encryption
+MAC Key,32,Binary,HMAC-SHA256 authentication
+Plaintext,20480,Text,Original VPN config
+Padding,16,PKCS7,Make multiple of 16
+IV,16,Random,Randomize encryption
+Ciphertext,20496,Binary,Encrypted data
+HMAC,32,SHA256,Integrity verification
+Total Encrypted,20544,Binary,Final encrypted package
