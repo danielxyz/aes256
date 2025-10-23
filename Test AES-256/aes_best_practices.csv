@@ -1,0 +1,7 @@
+Aspek,Praktik yang Benar,Kesalahan Umum,Dampak Jika Salah
+IV Generation,Generate random/unique untuk setiap enkripsi,Reuse IV dengan key yang sama,"Pola ciphertext terekspos, keamanan hancur"
+Key Management,"Simpan di HSM/Key Vault, rotate secara berkala",Hardcode key di source code,"Key mudah dicuri, data terekspos"
+Padding,Gunakan PKCS7 dengan implementasi standar,Custom padding tanpa validasi,Padding oracle attack
+Autentikasi,Tambahkan HMAC-SHA256 (Encrypt-then-MAC),Tidak ada integrity check,Ciphertext manipulation attack
+Library,"Gunakan library teruji (cryptography, OpenSSL)",Implementasi sendiri dari scratch,Bug kriptografi yang tidak terdeteksi
+IV Storage,Gabung dengan ciphertext (tidak perlu rahasia),Simpan terpisah atau hilang,Dekripsi tidak mungkin dilakukan

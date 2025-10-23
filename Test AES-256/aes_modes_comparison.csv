@@ -1,0 +1,6 @@
+Mode,Keamanan,Kecepatan,Autentikasi,Rekomendasi
+ECB,Rendah,Cepat,Tidak,TIDAK DISARANKAN - mengekspos pola data
+CBC,Sedang,Sedang,Tidak,Perlu tambahan MAC/HMAC untuk autentikasi
+CTR,Tinggi,Cepat,Tidak,Perlu tambahan MAC/HMAC untuk autentikasi
+GCM,Sangat Tinggi,Cepat,Ya,PALING DISARANKAN - autentikasi built-in
+CCM,Tinggi,Sedang,Ya,Alternatif GCM untuk resource terbatas
