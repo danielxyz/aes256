@@ -39,5 +39,4 @@ Saya akan:
 
  *
 
-  ⏳ Tunggu proses, aplikasi akan dibuat langsung dalam 1 script Python modern!
-  Full script beserta instruksi eksekusi akan saya hasilkan di langkah berikutnya.
+  ⏳ Tunggu proses, aplikasi akan dibuat
