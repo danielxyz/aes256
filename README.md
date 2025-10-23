@@ -1,4 +1,5 @@
 Aplikasi  AES-256 Blockchain GUI  super lengkap yang menggabungkan SEMUA fitur berikut secara terintegrasi:
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/d5f32ae7-d53e-4e05-b0d5-cdc833a534b1" />
 
   ✨ Fitur Super Lengkap:
 -  Blockchain transaction log  dengan visualisasi blok dan animasi jaringan sederhana
